@@ -17,12 +17,12 @@ const functionKeys = [
 
 export default function Keyboard() {
   return (
-    <div className="max-w-4xl w-full min-h-90 px-8">
-      <div className="bg-stone-200 min-h-90 rounded-3xl text-neutral-700 p-3">
+    <div className="min-h-90 w-full max-w-4xl px-8">
+      <div className="min-h-90 rounded-3xl bg-stone-200 p-3 text-neutral-700">
         {/* Top Row */}
-        <div className="flex items-center justify-between w-full">
-          <div className="flex items-center justify-center bg-white rounded-md rounded-tl-2xl shadow-sm shadow-neutral-400">
-            <div className=" relative mt-0.5 px-12 py-6  rounded-md rounded-tl-2xl bg-neutral-100">
+        <div className="flex w-full items-center justify-between">
+          <div className="flex items-center justify-center rounded-md rounded-tl-2xl bg-white shadow-sm shadow-neutral-400">
+            <div className="relative mt-0.5 rounded-md rounded-tl-2xl bg-neutral-100 px-12 py-6">
               <div className="absolute bottom-1 left-2 text-xs text-neutral-700">
                 esc
               </div>
@@ -31,16 +31,18 @@ export default function Keyboard() {
           {functionKeys.map((key, index) => {
             return (
               <Key key={index}>
-                 <div className="flex flex-col items-center justify-center gap-2">
+                <div className="flex flex-col items-center justify-center gap-2">
                   <div className="text-xs"> o</div>
-                  <div className="text-[9.5px] text-neutral-700">{key.name}</div>
-                  </div> 
+                  <div className="text-[9.5px] text-neutral-700">
+                    {key.name}
+                  </div>
+                </div>
               </Key>
-            )
+            );
           })}
-          <div className="flex items-center justify-center bg-white rounded-md rounded-tr-2xl shadow-sm shadow-neutral-400">
+          <div className="flex items-center justify-center rounded-md rounded-tr-2xl bg-white shadow-sm shadow-neutral-400">
             <div className="mt-0.5 rounded-md rounded-tr-2xl bg-neutral-50">
-              <div className="m-2 p-3.5 mx-2.5 border-2 shadow-sm border-neutral-300 rounded-4xl" />
+              <div className="m-2 mx-2.5 rounded-4xl border-2 border-neutral-300 p-3.5 shadow-sm" />
             </div>
           </div>
         </div>

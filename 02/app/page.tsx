@@ -1,8 +1,10 @@
-import Keyboard from "@/components/keyboard";
-import Image from "next/image";
+import Navbar from "@/components/navbar";
+import Responsive from "@/components/responsive";
 
 export default function Home() {
-  return <div className="flex justify-center items-center h-screen ">
-    <Keyboard />
-  </div>;
+  return (
+    <div className="">
+        <Navbar />
+    </div>
+  );
 }

@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Key({ children }: { children: React.ReactElement }) {
   return (
-    <div className="flex items-center active:bg-neutral-100  justify-center cursor-pointer bg-white rounded-md shadow-sm shadow-neutral-400">
-      <div className="mt-0.5 bg-neutral-100 rounded-md w-12.5 h-12">
-        <div className="flex flex-col justify-center h-full w-full items-center">
+    <div className="flex cursor-pointer items-center justify-center rounded-md bg-white shadow-sm shadow-neutral-400 active:bg-neutral-100">
+      <div className="mt-0.5 h-12 w-12.5 rounded-md bg-neutral-100">
+        <div className="flex h-full w-full flex-col items-center justify-center">
           {children}
         </div>
       </div>
